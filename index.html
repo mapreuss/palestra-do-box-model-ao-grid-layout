@@ -4,19 +4,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Do box model ao grid layout</title>
-
 	<link href="inspire/inspire.css" rel="stylesheet" />
-<link href="inspire/theme.css" rel="stylesheet" />
+	<link href="inspire/theme.css" rel="stylesheet" />
 </head>
+
 <body class="language-markup" data-prism-plugins="normalize-whitespace">
 
 <header id="intro" class="slide">
-	<p>LINX IMPULSE</p>
+	<p>MARTA PREUSS</p>
 	<h1>
 		Do box model <br>
 		ao grid layout
 	</h1>
-	<p class="attribution">Por Marta Preuss</p>
+	<p><img src="inspire/images/talk-url.png" alt="Talk URL"></p>
 </header>
 <section>
 	<article class="slide figure-left" title="Sobre mim">
@@ -69,26 +69,26 @@
 		</div>
 	</article>
 
-	<article class="slide" title="Tipos de CSS">
+	<article class="slide background-image" title="Tipos de CSS">
 		<h2>CSS</h2>
 		<h3>As coisas se complementam</h3>
 
-		<ul class="image-trio delayed-children">
+		<ul class="image-trio">
 			<li>
 				<figure>
-					<img src="inspire/images/ico-box.png" alt="">
+					<img src="inspire/images/box-model.svg" height="100" alt="">
 					<legend>Box Model</legend>
 				</figure>
 			</li>
 			<li>
 				<figure>
-					<img src="inspire/images/ico-flex.png" alt="">
+					<img src="inspire/images/flex-box.svg" height="100" alt="">
 					<legend>Flex box</legend>
 				</figure>
 			</li>
 			<li>
 				<figure>
-					<img src="inspire/images/ico-grid.png" alt="">
+					<img src="inspire/images/grid-layout.svg" height="100" alt="">
 					<legend>Grid layout</legend>
 				</figure>
 			</li>
@@ -214,26 +214,36 @@
 </section>
 
 <section>
-	<article class="slide">
-		<h2>Box model</h2>
-		<h3>No princípio, havia o CSS 1.x e sofrimento</h3>
-		<ul>
-			<li>tudo era tabela</li>
-			<li>browser wars / resset css</li>
-			<li>mudar uns estilos lá de fonte</li>
-			<li>flash</li>
-		</ul>
+	<article class="slide figure-left">
+		<figure>
+			<img src="inspire/images/css10.png" alt="Box model firefox">
+		</figure>
+		<div class="content">
+			<h2>No princípio...</h2>
+			<h3>havia o Netscape, o IE e sofrimento</h3>
+			<ul>
+				<li>tudo era tabela</li>
+				<li>browser wars / resset css</li>
+				<li>mudar uns estilos lá de fonte <a href="https://www.w3.org/TR/CSS1/">[+]</a></li>
+				<li>flash</li>
+			</ul>
+		</div>
 	</article>
-	<article class="slide">
-		<h2>Box model</h2>
-		<h3>Propriedades</h3>
-		<ul>
-			<li>position relative/absolute/fixed</li>
-			<li>float</li>
-			<li>margin/padding/top/left</li>
-			<li>display block/inline/inline-block</li>
-			<li>clearfix</li>
-		</ul>
+	<article class="slide figure-left image-auto">
+		<figure>
+			<img src="inspire/images/box-model-firefox.png" alt="Box model firefox">
+		</figure>
+		<div class="content">
+			<h2>Box model</h2>
+			<h3>Propriedades</h3>
+			<ul>
+				<li>margin / padding / top / left</li>
+				<li>display block / inline / inline-block</li>
+				<li>position relative / absolute / fixed</li>
+				<li>float</li>
+				<li>clearfix</li>
+			</ul>
+		</div>
 	</article>
 	<article  class="isolated demo slide" title="Código box model">
 		<textarea class="language-html">
@@ -742,7 +752,7 @@ a.button {
 	<article class="slide" title="Can I use?">
 		<h2>95%</h2>
 		<h3>dos navegadores dão suporte ao flex box</h3>
-
+		<div class="separator"></div>
 		<h2>85%</h2>
 		<h3>dos navegadores dão suporte ao grid layout</h3>
 	</article>
@@ -760,7 +770,7 @@ a.button {
 		<li>Layout dos slides: <a href="http://canva.com">canva.com</a></li>
 		<li>Repositório dos slides: <a href="https://github.com/mapreuss/palestra-do-box-model-ao-grid-layout">https://github.com/mapreuss/palestra-do-box-model-ao-grid-layout</a></li>
 	</ul>
-	</p>
+	<p><img src="inspire/images/talk-url.png" alt="Talk URL"></p>
 </footer>
 
 <script src="inspire/inspire.js"></script>
