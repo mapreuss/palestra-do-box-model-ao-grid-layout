@@ -3,220 +3,761 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Inspire.js: A brief introduction</title>
+	<title>Do box model ao grid layout</title>
 
 	<link href="inspire.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
-	<link href="talk.css" rel="stylesheet" />
 </head>
 <body class="language-markup" data-prism-plugins="normalize-whitespace">
 
 <header id="intro" class="slide">
+	<p>LINX IMPULSE</p>
 	<h1>
-		Inspire.js
+		Do box model <br>
+		ao grid layout
 	</h1>
-	<h2>
-		Lean,&nbsp;hackable,&nbsp;extensible slide&nbsp;deck&nbsp;framework
-	</h2>
-	<p class="attribution">By <a href="http://lea.verou.me">Lea Verou</a> and <a href="https://github.com/LeaVerou/inspire.js/graphs/contributors">contributors</a></p>
+	<p class="attribution">Por Marta Preuss</p>
 </header>
 <section>
-	<header class="slide">
-		<h1>Introduction</h1>
-	</header>
+	<article class="slide figure-left" title="Sobre mim">
+		<figure>
+			<img src="images/foto-marta.png" alt="Marta Preuss">
+		</figure>
+		<div class="content">
+			<h2>Olá</h2>
+			<h3>Meu nome é Marta Preuss</h3>
 
-	<article class="slide" title="Inspire.js: Introduction">
-		<h1>Main idea</h1>
+			<p>Comunicação Social com Habilitação em Mídias Digitais <br>
+				Metodista <br>
+				2008
+			</p>
+			<p>Pós Graduação em Design de Interação <br>
+				Univali <br>
+				2018
+			</p>
 
-		<ul class="delayed-children">
-			<li>An HTML file contains the whole presentation</li>
-			<li>Themes as CSS files</li>
-			<li>Plugins for extra functionality, autoloaded when used</li>
-			<li>Nice JavaScript API for really custom things</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>History</h1>
-		<ul>
-			<li>Originally created in 2010 for my first talk, at <a href="http://front-trends.com">Front Trends 2010</a></li>
-			<li>By popular demand, it was released shortly after, named CSSS</li>
-			<li>Huge refactor and renaming to Inspire.js in Sep 2018</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Syntax</h1>
-
-		<ul>
-			<li>Slides are defined by adding the <code>slide</code> class to any elements.</li>
-			<li><code>&lt;header class="slide"></code> is a header slide (relevant for the <a href="#overview">Overview</a>)</li>
-		</ul>
-	</article>
-
-	<article class="slide" id="navigation">
-		<h1>Keyboard Navigation</h1>
-		<ul>
-			<li><kbd>→</kbd> or <kbd>↓</kbd> to advance to the next slide or incrementally displayed item</li>
-			<li><kbd>←</kbd> or <kbd>↑</kbd> to go to the previous slide or incrementally displayed item</li>
-			<li><kbd>Ctrl</kbd><kbd>→</kbd> or <kbd>Ctrl</kbd><kbd>↓</kbd> to jump to the next slide</li>
-			<li><kbd>Ctrl</kbd><kbd>←</kbd> or <kbd>Ctrl</kbd><kbd>↑</kbd> to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li><kbd>Ctrl</kbd><kbd>G</kbd> to jump to an arbitrary slide (by slide number or identifier)</li>
-		</ul>
+			<ul class="work-places">
+				<li><img src="images/company-abril.png" alt="Editora Abril"></li>
+				<li><img src="images/company-clickon.png" alt="ClickOn"></li>
+				<li><img src="images/company-estadao.png" alt="Estadão"></li>
+				<li><img src="images/company-socialbase.png" alt="SocialBase"></li>
+				<li><img src="images/company-sumone.png" alt="SumOne"></li>
+				<li><img src="images/company-linx.png" alt="Linx Impulse"></li>
+			</ul>
+		</div>
 	</article>
 </section>
 
 <section>
-	<header class="slide">
-		<h1>Features</h1>
-	</header>
+	<article class="slide figure-header" title="O que é CSS">
+		<figure class="header-figure"><img src="images/header-css.png" alt=""></figure>
+		<div class="content-wrapper">
+			<div class="title">
+				<h2>O que é CSS?</h2>
+				<h3>Cascate Style Sheet (folha de estilos em cascata)</h3>
+			</div>
 
-	<article class="slide" id="data-insert">
-		<h1>Repeated slides</h1>
+			<div class="content">
+				<p>Cascade Style Sheet são folhas de estilo que formatam o HTML para a exibição em navegadores da web, tanto desktop
+				quanto mobile.</p>
 
-		<ul>
-			<li>Use attribute <code>data-insert="#id"</code> on an empty slide to re-insert it later in the slideshow</li>
-			<li>Notice how this slide will also be re-inserted after the next one!</li>
-		</ul>
+				<p>Imagine o HTML como uma régua de estêncil: ele tem algumas formas, mas a disposição dos elementos, as cores, isso quem
+				decide é o css.</p>
+
+				<figure><img src="images/css-html.gif" alt="Animação que mostra a diferença de uma página com HTML puro e com CSS"></figure>
+			</div>
+		</div>
 	</article>
 
-	<article class="slide">
-		<h1>IDs and titles</h1>
-		<ul>
-			<li>IDs are dynamically assigned by JavaScript, but you can also use your own</li>
-			<li>Slide titles (used in the browser tab when the slide is active, and in the <a href="#overview">Overview</a>) via the <code>title</code> or <code>data-title</code> attributes or headings in the slide.</li>
-			<li>If only an id or only a title is provided, the other is extracted from it.</li>
-		</ul>
-	</article>
+	<article class="slide" title="Tipos de CSS">
+		<h2>CSS</h2>
+		<h3>As coisas se complementam</h3>
 
-	<article class="slide" data-insert="#data-insert"></article>
-
-	<article class="slide">
-		<h1>Incremental display</h1>
-
-		<ul class="delayed-children">
-			<li>Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li>Use selector <code>.delayed:not(.current):not(.displayed)</code> to change the style of undisplayed items</li>
-			<li>Use selector <code>.delayed.displayed</code> to change the style of displayed items</li>
-			<li>Use selector <code>.delayed.current</code> to change the style of current items</li>
-			<li>Use <code>class="delayed-children"</code> to apply the <code>delayed</code> class to all of an element’s children</li>
+		<ul class="image-trio delayed-children">
 			<li>
-				Nested delayed items <strong class="delayed">are possible</strong>!
+				<figure>
+					<img src="images/ico-box.png" alt="">
+					<legend>Box Model</legend>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/ico-flex.png" alt="">
+					<legend>Flex box</legend>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="images/ico-grid.png" alt="">
+					<legend>Grid layout</legend>
+				</figure>
 			</li>
 		</ul>
 	</article>
+
+	<article class="slide" title="Exemplo prático">
+		<h2>Exemplo prático</h2>
+		<figure><img src="images/sample.png" alt=""></figure>
+	</article>
+
+	<article class="slide figure-left" title="CSS helpers">
+		<figure>
+			<img src="images/figure-aside.png" alt="">
+		</figure>
+		<div class="content">
+			<h2>Propriedades bônus</h2>
+			<h3>Calc:</h3>
+			<pre class="language-css">
+				<code>calc([valor A] [operação] [valor N])</code>
+			</pre>
+			<p>Faça operações matemáticas no CSS. <br>
+			   Suporte desde o ie9. <br>
+			   <a href="https://css-tricks.com/a-couple-of-use-cases-for-calc/">https://css-tricks.com/a-couple-of-use-cases-for-calc/</a></p>
+			<br>
+			<h3>Variáveis:</h3>
+			<pre class="language-css">
+				<code>--nome-var: [VALOR];
+				propriedade: var(--nome-var);
+				</code>
+			</pre>
+			<p>Crie variáveis diretamente no CSS. <br>
+			   Não funciona em nenhum IE (só Edge). <br>
+			   <a href="https://css-tricks.com/difference-between-types-of-css-variables/">https://css-tricks.com/difference-between-types-of-css-variables/</a></p>
+		</div>
+	</article>
+	<article class="isolated demo slide" title="CSS básico do exemplo">
+		<textarea class="language-html">
+			<div class="container">
+
+				<div class="labels">
+					<div class="discount">10%</div>
+				</div>
+
+				<div class="figure">
+					<img src="http://via.placeholder.com/340x200">
+				</div>
+
+				<div class="content">
+
+					<div class="product-name">
+						Nome do produto com duas linhas de explicações
+					</div>
+
+					<div class="pricing">
+						<div class="old-pricing">
+							De R$30,00
+						</div>
+						<div class="pricing">
+							Por R$25,00
+						</div>
+					</div>
+
+					<div class="action">
+						<a href="#" class="button">Comprar</a>
+					</div>
+
+				</div>
+
+			</div>
+		</textarea>
+		<textarea class="language-css">
+			:root {
+				--main-color: #95989a;
+				--opposite-color: #ffffff;
+				--font-family: "Helvetica", arial;
+				--spacing: 20px;
+				--img-size: 340px;
+			}
+
+			body {
+				font-family: var(--font-family);
+				color: var(--main-color);
+			}
+
+			.container {
+				border: 1px solid var(--main-color);
+			}
+
+			.discount {
+				width: calc(var(--spacing) * 2);
+				height: calc(var(--spacing) * 2);
+				border-radius: 50%;
+				background: var(--main-color);
+				color: var(--opposite-color);
+				font-size: 15px;
+			}
+
+			.figure img {
+				width: 100%;
+			}
+
+			.product-name {
+				font-size: 20px;
+				line-height: 30px;
+			}
+
+			.pricing {
+				font-size: 15px;
+				line-height: 20px;
+			}
+
+			a.button {
+				text-decoration: none;
+				border-radius: 7px;
+				border: 1px solid var(--main-color);
+				color: var(--main-color);
+				font-size: 20px;
+			}
+
+		</textarea>
+	</article>
 </section>
 
 <section>
-	<header class="slide">
-		<h1>Plugins</h1>
-	</header>
-
-	<article class="slide" id="overview">
-		<h1>Overview</h1>
-
-		<ul>
-			<li>Loaded automatically, use <code>&lt;code class="no-overview"></code> to prevent this.</li>
-			<li>Press <kbd>Ctrl</kbd>+<kbd>H</kbd> (or <kbd>Shift</kbd>+<kbd>H</kbd>) to trigger, <kbd>Esc</kbd> to close.</li>
-			<li class="delayed">Cool, huh? You can press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>H</kbd> to see all slides</li>
-		</ul>
-	</article>
-
 	<article class="slide">
-		<h1>Syntax highlighting with PrismJS</h1>
-
+		<h2>Box model</h2>
+		<h3>No princípio, havia o CSS 1.x e sofrimento</h3>
 		<ul>
-			<li>Autoloads core & languages used</li>
-			<li>Load plugins by listing their ids in a <code>data-prism-plugins</code> attribute, on any element (first one will be used).</li>
-			<li>Automatically figures out dependencies & aliases</li>
-			<li>CSS is up to you!</li>
+			<li>tudo era tabela</li>
+			<li>browser wars / resset css</li>
+			<li>mudar uns estilos lá de fonte</li>
+			<li>flash</li>
 		</ul>
-		<pre class="language-jsx"><code>var start = new Date().getTime();
-setInterval(function() {
-	React.render(
-		&lt;ExampleApplication elapsed={new Date().getTime() - start} />,
-		document.getElementById('container')
-	);
-}, 50);</code></pre>
 	</article>
-
-	<article class="slide" data-video="https://mavo.io/demos/eshop/video.mp4" style="--url: 'https://mavo.io/demos/eshop'" id="media-plugin">
-		<div>
-			<h1>Annotated videos</h1>
-			<ul>
-				<li><code>data-video</code> for URL</li>
-				<li><code>class="annotation"</code> for annotations</li>
-				<li><code>data-time</code> and <code>data-pause</code> on annotations</li>
-			</ul>
-		</div>
-		<span class="annotation top-pointer" style="top: 44%; left: 59.5%; --pointer-left: 4em;" data-time="3000 to 3500" data-pause>Click to dismiss & resume</span>
-		<span class="annotation top-pointer" style="top: 26%; left: 67.1%" data-time="5200 to 5700" data-pause="2000">Auto-resume after 2sec</span>
+	<article class="slide">
+		<h2>Box model</h2>
+		<h3>Propriedades</h3>
+		<ul>
+			<li>position relative/absolute/fixed</li>
+			<li>float</li>
+			<li>margin/padding/top/left</li>
+			<li>display block/inline/inline-block</li>
+			<li>clearfix</li>
+		</ul>
 	</article>
+	<article  class="isolated demo slide" title="Código box model">
+		<textarea class="language-html">
+			<div class="container">
+				<div class="labels">
+					<div class="discount">10%</div>
+				</div>
 
-	<article class="demo slide" id="livedemo">
-		<textarea class="language-html"><p>Live demo!</p></textarea>
-		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
-			}
+				<div class="figure">
+					<img src="http://via.placeholder.com/340x200">
+				</div>
+
+				<div class="content">
+
+					<div class="product-name">
+						Nome do produto com duas linhas de explicações
+					</div>
+
+					<div class="pricing">
+						<div class="old-pricing">
+							De R$30,00
+						</div>
+						<div class="pricing">
+							Por R$25,00
+						</div>
+					</div>
+
+					<div class="action">
+						<a href="#" class="button">Comprar</a>
+					</div>
+
+				</div>
+
+			</div>
 		</textarea>
-	</article>
-
-	<article class="isolated demo slide" id="isolated-livedemo">
-		<textarea class="language-html"><p>Live demo in iframe!</p></textarea>
 		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
-			}
+.container{
+    box-sizing: border-box;
+    padding: var(--spacing);
+    max-width: calc(var(--img-size) + var(--spacing) * 2);
+    position: relative;
+}
+.figure, 
+.product-name, 
+.pricing{
+    margin-bottom: var(--spacing);
+}
+.labels{
+    position: absolute;
+    top: var(--spacing);
+    right: var(--spacing);
+}
+.discount{
+    line-height: 40px;
+    text-align: center;
+}
+.button{
+    display: block;
+    height: calc(var(--spacing) * 3);
+    line-height: calc(var(--spacing) * 3);
+    text-align: center;
+}
+
+/* Horizontal */
+.container.horizontal{
+    max-width: calc(var(--img-size) * 2 + var(--spacing) * 2);
+}
+.container.horizontal .labels{
+    right: auto;
+    left: calc(var(--img-size) - var(--spacing));
+}
+.container.horizontal .figure{
+    float: left;
+    margin-right: var(--spacing);
+}
+.container.horizontal .action{
+    display: inline-block;
+    width: calc(100% - 350px - var(--spacing));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DEFAULT CSS */
+:root {
+  --main-color: #95989a;
+  --opposite-color: #ffffff;
+  --font-family: "Helvetica", arial;
+  --spacing: 20px;
+  --img-size: 340px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--main-color);
+}
+
+.container {
+  border: 1px solid var(--main-color);
+}
+
+.discount {
+  width: calc(var(--spacing) * 2);
+  height: calc(var(--spacing) * 2);
+  border-radius: 50%;
+  background: var(--main-color);
+  color: var(--opposite-color);
+  font-size: 15px;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.product-name {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.pricing {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+a.button {
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  font-size: 20px;
+}
+
 		</textarea>
-	</article>
-
-	<article class="slide">
-		<h1>Timer</h1>
-		<ul>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code>.</li>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
-		</ul>
-	</article>
-
-	<article class="slide" data-resolution="1024 768">
-		<h1>Resolution</h1>
-		<ul>
-			<li>Design for a specific resolution, and have slides scale up and down based on the viewport.</li>
-			<li>Define with the attribute <code>data-resolution</code> on the <code>&lt;body></code> for all slides, a grouping element, or individual slides (like this one!).</li>
-			<li>Try resizing the viewport, note how the slide size adapts!</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Presenter View</h1>
-
-		<ul>
-			<li>Use <code>&lt;p class="presenter-notes"></code> for presenter notes. You need at least one of these to have the plugin loaded.</li>
-			<li>Presenter view with <kbd>Ctrl</kbd><kbd>P</kbd> (or <kbd>Shift</kbd><kbd>P</kbd>)</li>
-			<li>Also timer, upcoming slide</li>
-		</ul>
-	</article>
-
-	<article class="slide" id="slidestyle">
-		<style data-slide>
-			.slide {
-				background: rebeccapurple;
-			}
-		</style>
-		<h1>Slide-specific CSS</h1>
-		<p>You can use the <code>data-slide</code> attribute on <code>&lt;style></code> elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, run <code class="language-js">$('#slidestyle style').sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
 	</article>
 </section>
 
-<footer class="slide" title="The End">
-	<h1>Thank you!</h1>
-	<p>Get it or contribute at <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
+<section>
+	<article class="slide figure-header" title="Flex-box">
+		<figure class="header-figure"><img src="images/header-css.png" alt=""></figure>
+		<div class="content-wrapper">
+			<div class="title">
+				<h2>FLex box</h2>
+				<h3>A web é dinâmica demais para caixas</h3>
+			</div>
+
+			<div class="content">
+				<ul>
+					<li>Desde 2009, última atualização 2017</li>
+					<li>O elemento pai dita as regras para os filhos. Por padrão, transforma em colunas.</li>
+					<li>Todos os filhos diretos são afetados (na dúvida, mude a estrutura)</li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	<article class="isolated demo slide" title="Código flex box">
+		<textarea class="language-html">
+			<div class="container">
+				<div class="labels">
+					<div class="discount">10%</div>
+				</div>
+
+				<div class="figure">
+					<img src="http://via.placeholder.com/340x200">
+				</div>
+
+				<div class="content">
+
+					<div class="product-name">
+						Nome do produto com duas linhas de explicações
+					</div>
+
+					<div class="pricing">
+						<div class="old-pricing">
+							De R$30,00
+						</div>
+						<div class="pricing">
+							Por R$25,00
+						</div>
+					</div>
+
+					<div class="action">
+						<a href="#" class="button">Comprar</a>
+					</div>
+
+				</div>
+
+			</div>
+		</textarea>
+		<textarea class="language-css">
+.container{
+	box-sizing: border-box;
+	padding: var(--spacing);
+	max-width: calc(var(--img-size) + var(--spacing) * 2);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.container > *,
+	.product-name{
+	margin-bottom: var(--spacing);
+}
+
+.container > *:last-of-type{
+	margin-bottom: 0;
+}
+
+.labels{
+	position: absolute;
+	top: var(--spacing);
+	right: var(--spacing);
+}
+.discount{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button{
+	height: calc(var(--spacing) * 3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Horizontal */
+.container.horizontal{
+	max-width: calc(var(--img-size) * 2);
+	flex-direction: row;
+}
+.container.horizontal .figure{
+	margin-right: var(--spacing);
+	flex: 0 0 var(--img-size);
+}
+.container.horizontal .labels{
+	left: calc(var(--img-size) - var(--spacing));
+}
+.container.horizontal .pricing{
+	margin-bottom: var(--spacing);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+--main-color: #95989a;
+--opposite-color: #ffffff;
+--font-family: "Helvetica", arial;
+--spacing: 20px;
+--img-size: 340px;
+}
+
+body {
+font-family: var(--font-family);
+color: var(--main-color);
+}
+
+.container {
+border: 1px solid var(--main-color);
+}
+
+.discount {
+width: calc(var(--spacing) * 2);
+height: calc(var(--spacing) * 2);
+border-radius: 50%;
+background: var(--main-color);
+color: var(--opposite-color);
+font-size: 15px;
+}
+
+.figure img {
+width: 100%;
+}
+
+.product-name {
+font-size: 20px;
+line-height: 30px;
+}
+
+.pricing {
+font-size: 15px;
+line-height: 20px;
+}
+
+a.button {
+text-decoration: none;
+border-radius: 7px;
+border: 1px solid var(--main-color);
+color: var(--main-color);
+font-size: 20px;
+}
+
+		</textarea>
+	</article>
+</section>
+
+<section>
+	<article class="slide figure-header" title="Flex-box">
+		<figure class="header-figure"><img src="images/header-css.png" alt=""></figure>
+		<div class="content-wrapper">
+			<div class="title">
+				<h2>Grid model</h2>
+				<h3>Chegou a hora da web ser bi-dimensional.</h3>
+			</div>
+
+			<div class="content">
+				<ul>
+					<li>Lançado em maio/2017</li>
+					<li>Elemento bi-direcional: trabalha com X e Y</li>
+					<li>O elemento pai dita as regras para os filhos</li>
+					<li>Organize todos os elementos a partir de um elemento-pai</li>
+					<li>Indicado para a página toda.</li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	<article class="isolated demo slide" title="Código grid layout">
+		<textarea class="language-html">
+<div class="container">
+
+	<div class="labels">
+		<div class="discount">10%</div>
+	</div>
+
+	<div class="figure">
+		<img src="http://via.placeholder.com/340x200">
+	</div>
+
+	<div class="content">
+
+		<div class="product-name">
+			Nome do produto com duas linhas de explicações
+		</div>
+
+		<div class="pricing">
+			<div class="old-pricing">
+				De R$30,00
+			</div>
+			<div class="pricing">
+				Por R$25,00
+			</div>
+		</div>
+
+		<div class="action">
+			<a href="#" class="button">Comprar</a>
+		</div>
+
+	</div>
+
+</div>
+		</textarea>
+		<textarea class="language-css">
+.container{
+    display: grid;
+    grid-gap: var(--spacing);
+    padding: var(--spacing);
+    max-width: var(--img-size);
+}
+.container > *{
+    grid-column-start: 1;
+}
+.content{
+    display: grid;
+    grid-gap: var(--spacing);
+}
+.labels{
+    grid-row-start: 1;
+    justify-self: end;
+    z-index: 2;
+}
+.discount{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.figure{
+    grid-row-start: 1;
+}
+.button{
+    display: block;
+    text-align: center;
+    padding: var(--spacing) 0;
+}
+
+/* Horizontal */
+.container.horizontal{
+    max-width: calc( var(--img-size) * 2);
+    grid-template-columns: 1fr 1fr;
+}
+.container.horizontal .content{
+    grid-column-start: 2;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --main-color: #95989a;
+  --opposite-color: #ffffff;
+  --font-family: "Helvetica", arial;
+  --spacing: 20px;
+  --img-size: 340px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--main-color);
+}
+
+.container {
+  border: 1px solid var(--main-color);
+}
+
+.discount {
+  width: calc(var(--spacing) * 2);
+  height: calc(var(--spacing) * 2);
+  border-radius: 50%;
+  background: var(--main-color);
+  color: var(--opposite-color);
+  font-size: 15px;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.product-name {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.pricing {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+a.button {
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+		</textarea>
+	</article>
+</section>
+
+<section>
+	<article class="slide" title="Can I use?">
+		<h2>95%</h2>
+		<h3>dos navegadores dão suporte ao flex box</h3>
+
+		<h2>85%</h2>
+		<h3>dos navegadores dão suporte ao grid layout</h3>
+	</article>
+	<article class="slide" title="Conclusão">
+		<h3>Conclusão</h3>
+		<h1>EU QUERO MEXER NO ITEM (FLEX OU BOX) OU NO CONTAINER TODO (GRID)?</h1>
+	</article>
+</section>
+
+<footer class="slide" title="Agradecimentos">
+	<h1>Obrigada!</h1>
+	<p>marta.preuss@gmail.com</p>
+	<p>Framework de slides: <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a> <br>
+		Layout dos slides: <a href="http://canva.com">canva.com</a>
+	</p>
 </footer>
 
 <script src="inspire.js"></script>
