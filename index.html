@@ -416,6 +416,127 @@ a.button {
 		</div>
 	</article>
 	<article class="isolated demo slide" title="Código flex box">
+		<textarea class="language-css">
+		.container{
+			box-sizing: border-box;
+			padding: var(--spacing);
+			max-width: calc(var(--img-size) + var(--spacing) * 2);
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.container > *,
+			.product-name{
+			margin-bottom: var(--spacing);
+		}
+		
+		.container > *:last-of-type{
+			margin-bottom: 0;
+		}
+		
+		.labels{
+			position: absolute;
+			top: var(--spacing);
+			right: var(--spacing);
+		}
+		.discount{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.button{
+			height: calc(var(--spacing) * 3);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		/* Horizontal */
+		.container.horizontal{
+			max-width: calc(var(--img-size) * 2);
+			flex-direction: row;
+		}
+		.container.horizontal .figure{
+			margin-right: var(--spacing);
+			flex: 0 0 var(--img-size);
+		}
+		.container.horizontal .labels{
+			left: calc(var(--img-size) - var(--spacing));
+		}
+		.container.horizontal .pricing{
+			margin-bottom: var(--spacing);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		:root {
+		--main-color: #95989a;
+		--opposite-color: #ffffff;
+		--font-family: "Helvetica", arial;
+		--spacing: 20px;
+		--img-size: 340px;
+		}
+		
+		body {
+		font-family: var(--font-family);
+		color: var(--main-color);
+		}
+		
+		.container {
+		border: 1px solid var(--main-color);
+		}
+		
+		.discount {
+		width: calc(var(--spacing) * 2);
+		height: calc(var(--spacing) * 2);
+		border-radius: 50%;
+		background: var(--main-color);
+		color: var(--opposite-color);
+		font-size: 15px;
+		}
+		
+		.figure img {
+		width: 100%;
+		}
+		
+		.product-name {
+		font-size: 20px;
+		line-height: 30px;
+		}
+		
+		.pricing {
+		font-size: 15px;
+		line-height: 20px;
+		}
+		
+		a.button {
+		text-decoration: none;
+		border-radius: 7px;
+		border: 1px solid var(--main-color);
+		color: var(--main-color);
+		font-size: 20px;
+		}
+		
+				</textarea>
 		<textarea class="language-html">
 			<div class="container">
 				<div class="labels">
@@ -449,127 +570,7 @@ a.button {
 
 			</div>
 		</textarea>
-		<textarea class="language-css">
-.container{
-	box-sizing: border-box;
-	padding: var(--spacing);
-	max-width: calc(var(--img-size) + var(--spacing) * 2);
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
-
-.container > *,
-	.product-name{
-	margin-bottom: var(--spacing);
-}
-
-.container > *:last-of-type{
-	margin-bottom: 0;
-}
-
-.labels{
-	position: absolute;
-	top: var(--spacing);
-	right: var(--spacing);
-}
-.discount{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.button{
-	height: calc(var(--spacing) * 3);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-/* Horizontal */
-.container.horizontal{
-	max-width: calc(var(--img-size) * 2);
-	flex-direction: row;
-}
-.container.horizontal .figure{
-	margin-right: var(--spacing);
-	flex: 0 0 var(--img-size);
-}
-.container.horizontal .labels{
-	left: calc(var(--img-size) - var(--spacing));
-}
-.container.horizontal .pricing{
-	margin-bottom: var(--spacing);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
---main-color: #95989a;
---opposite-color: #ffffff;
---font-family: "Helvetica", arial;
---spacing: 20px;
---img-size: 340px;
-}
-
-body {
-font-family: var(--font-family);
-color: var(--main-color);
-}
-
-.container {
-border: 1px solid var(--main-color);
-}
-
-.discount {
-width: calc(var(--spacing) * 2);
-height: calc(var(--spacing) * 2);
-border-radius: 50%;
-background: var(--main-color);
-color: var(--opposite-color);
-font-size: 15px;
-}
-
-.figure img {
-width: 100%;
-}
-
-.product-name {
-font-size: 20px;
-line-height: 30px;
-}
-
-.pricing {
-font-size: 15px;
-line-height: 20px;
-}
-
-a.button {
-text-decoration: none;
-border-radius: 7px;
-border: 1px solid var(--main-color);
-color: var(--main-color);
-font-size: 20px;
-}
-
-		</textarea>
+		
 	</article>
 </section>
 
@@ -594,6 +595,126 @@ font-size: 20px;
 		</div>
 	</article>
 	<article class="isolated demo slide" title="Código grid layout">
+		<textarea class="language-css">
+		.container{
+			display: grid;
+			grid-gap: var(--spacing);
+			padding: var(--spacing);
+			max-width: var(--img-size);
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr;
+		}
+		.container > *{
+		    grid-column-start: 1;
+		}
+		.content{
+		    display: grid;
+		    grid-gap: var(--spacing);
+		}
+		.labels{
+		    grid-row-start: 1;
+		    justify-self: end;
+		    z-index: 2;
+		}
+		.discount{
+		    display: flex;
+		    justify-content: space-around;
+		    align-items: center;
+		}
+		.figure{
+		    grid-row-start: 1;
+		}
+		.button{
+		    display: block;
+		    text-align: center;
+		    padding: var(--spacing) 0;
+		}
+		
+		/* Horizontal */
+		.container.horizontal{
+		    max-width: calc( var(--img-size) * 2);
+		    grid-template-columns: 1fr 1fr;
+		}
+		.container.horizontal .content{
+		    grid-column-start: 2;
+		} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		:root {
+		  --main-color: #95989a;
+		  --opposite-color: #ffffff;
+		  --font-family: "Helvetica", arial;
+		  --spacing: 20px;
+		  --img-size: 340px;
+		}
+		
+		body {
+		  font-family: var(--font-family);
+		  color: var(--main-color);
+		}
+		
+		.container {
+		  border: 1px solid var(--main-color);
+		}
+		
+		.discount {
+		  width: calc(var(--spacing) * 2);
+		  height: calc(var(--spacing) * 2);
+		  border-radius: 50%;
+		  background: var(--main-color);
+		  color: var(--opposite-color);
+		  font-size: 15px;
+		}
+		
+		.figure img {
+		  width: 100%;
+		}
+		
+		.product-name {
+		  font-size: 20px;
+		  line-height: 30px;
+		}
+		
+		.pricing {
+		  font-size: 15px;
+		  line-height: 20px;
+		}
+		
+		a.button {
+		  text-decoration: none;
+		  border-radius: 7px;
+		  border: 1px solid var(--main-color);
+		  color: var(--main-color);
+		  font-size: 20px;
+		}
+		
+				</textarea>
 		<textarea class="language-html">
 <div class="container">
 
@@ -628,124 +749,7 @@ font-size: 20px;
 
 </div>
 		</textarea>
-		<textarea class="language-css">
-.container{
-    display: grid;
-    grid-gap: var(--spacing);
-    padding: var(--spacing);
-    max-width: var(--img-size);
-}
-.container > *{
-    grid-column-start: 1;
-}
-.content{
-    display: grid;
-    grid-gap: var(--spacing);
-}
-.labels{
-    grid-row-start: 1;
-    justify-self: end;
-    z-index: 2;
-}
-.discount{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.figure{
-    grid-row-start: 1;
-}
-.button{
-    display: block;
-    text-align: center;
-    padding: var(--spacing) 0;
-}
-
-/* Horizontal */
-.container.horizontal{
-    max-width: calc( var(--img-size) * 2);
-    grid-template-columns: 1fr 1fr;
-}
-.container.horizontal .content{
-    grid-column-start: 2;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-  --main-color: #95989a;
-  --opposite-color: #ffffff;
-  --font-family: "Helvetica", arial;
-  --spacing: 20px;
-  --img-size: 340px;
-}
-
-body {
-  font-family: var(--font-family);
-  color: var(--main-color);
-}
-
-.container {
-  border: 1px solid var(--main-color);
-}
-
-.discount {
-  width: calc(var(--spacing) * 2);
-  height: calc(var(--spacing) * 2);
-  border-radius: 50%;
-  background: var(--main-color);
-  color: var(--opposite-color);
-  font-size: 15px;
-}
-
-.figure img {
-  width: 100%;
-}
-
-.product-name {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.pricing {
-  font-size: 15px;
-  line-height: 20px;
-}
-
-a.button {
-  text-decoration: none;
-  border-radius: 7px;
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
-  font-size: 20px;
-}
-
-		</textarea>
+		
 	</article>
 </section>
 
